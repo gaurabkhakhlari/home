@@ -69,6 +69,80 @@ document.addEventListener("DOMContentLoaded",()=>{
                 });
 
             }
+
+            if (progress >= 0.5 && currentPhasePhase === 1){
+                currentPhase= 2;
+                
+                gsap.to(".col-2",{opacity:0, scale:0.75, duration:0.75});
+                gsap.to(".col-3",{x:"0%", duration:0.75});
+                gsap.to(".col-4",{y:"0%", duration:0.75});
+
+
+                gsap.to(".col-3 .col-content-wrapper .line span",{
+                    y:"-125%",
+                    duration:0.75,
+
+                });
+                 gsap.to(".col-3 .col-content-wrapper-2 .line span",{
+                    y:"0%",
+                    duration:0.75,
+                    delay:0.5,
+
+                });
+
+
+
+            }
+
+
+            if (progress< 0.25 && currentPhase >= 1){
+
+                currentPhase = 0;
+
+                         
+                gsap.to(".col-1",{opacity:1, scale:1, duration:0.75});
+                gsap.to(".col-2",{x:"100%", duration:0.75});
+                gsap.to(".col-3",{y:"100%", duration:0.75});
+
+
+                gsap.to(".col-img-1 img ",{ scale:1, duration:0.75});
+
+                gsap.to(".col-img-2 ",{ 
+
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);",
+                    duration: 0.75,
+                });
+
+                gsap.to(".col-img-2 img",{
+                    scale:1.25, duration: 0.75,
+                });
+
+
+
+            }
+
+
+            if(progress< 0.5 && currentPhase === 2){
+                currentPhase=1;
+
+                 
+                gsap.to(".col-2",{opacity:1, scale:1, duration:0.75});
+                gsap.to(".col-3",{x:"100%", duration:0.75});
+                gsap.to(".col-4",{y:"100%", duration:0.75});
+
+
+                gsap.to(".col-3 .col-content-wrapper .line span",{
+                    y:"0%",
+                    duration:0.75,
+                    delay : 0.5,
+
+                });
+                 gsap.to(".col-3 .col-content-wrapper-2 .line span",{
+                    y:"-125%",
+                    duration:0.75,
+
+                });
+            }
         },
     });
     
