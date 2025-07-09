@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         onUpdate: (self)=> {
             const progress = self.progress;
 
-            if(progress => 0.25 && currentPhase ===0){
+            if(progress >= 0.25 && currentPhase ===0){
                 currentPhase = 1;
 
                 gsap.to(".col-1",{opacity:0, scale:0.75, duration:0.75});
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
             }
 
-            if (progress >= 0.5 && currentPhasePhase === 1){
+            if (progress >= 0.5 && currentPhase === 1){
                 currentPhase= 2;
                 
                 gsap.to(".col-2",{opacity:0, scale:0.75, duration:0.75});
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             }
 
 
-            if (progress< 0.25 && currentPhase >= 1){
+            if (progress < 0.25 && currentPhase >= 1){
 
                 currentPhase = 0;
 
